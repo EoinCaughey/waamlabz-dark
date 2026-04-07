@@ -3,62 +3,126 @@
   "type": "dark",
   "colors": {
     "editor.background": "#0f1622",
+    "editor.foreground": "#e5e7eb",
     "sideBar.background": "#0b1019",
     "activityBar.background": "#090d14",
     "activityBar.foreground": "#459e85",
-    "editorGroupHeader.tabsBackground": "#0b1019",
-    "tab.activeBackground": "#0f1622",
-    "tab.inactiveBackground": "#0b1019",
-    // --- Removing all visible borders ---
-    "sideBar.border": "#0f1622",
-    "editorGroup.border": "#0f1622",
-    "tab.border": "#0b1019",
-    "panel.border": "#0f1622",
-    
     "statusBar.background": "#090d14",
     "statusBar.foreground": "#459e85",
-    "editorCursor.foreground": "#459e85"
+    "titleBar.activeBackground": "#090d14",
+    "titleBar.activeForeground": "#459e85",
+    "editorCursor.foreground": "#459e85",
+    "editor.lineHighlightBackground": "#ffffff0a",
+    "sideBar.border": "#00000000"
   },
   "tokenColors": [
+    // 1. COMMENTS & DOCSTRINGS (REINSTATED)
     {
       "name": "Comments",
-      "scope": ["comment"],
+      "scope": [
+        "comment",
+        "punctuation.definition.comment",
+        "unused.comment",
+        "string.quoted.docstring.multi.python"
+      ],
       "settings": { "foreground": "#459e8580", "fontStyle": "italic" }
     },
+    // 2. LOGIC & KEYWORDS (WAAMLABZ GREEN)
     {
-      "name": "Self Keyword (Python)",
-      "scope": ["variable.language.self.python", "variable.parameter.function.language.special.self.python"],
-      "settings": { "foreground": "#22d3ee", "fontStyle": "bold" } // Bright Cyan
+      "name": "Keywords & Storage",
+      "scope": [
+        "keyword",
+        "storage.type",
+        "storage.modifier",
+        "keyword.operator.logical.python",
+        "keyword.control.import.python",
+        "variable.language.self",
+        "variable.parameter.function.language.special.self"
+      ],
+      "settings": { "foreground": "#459e85", "fontStyle": "bold" }
     },
+    // 3. OBJECT PROPERTIES & ATTRIBUTES (CYAN)
     {
-      "name": "Keywords (def, try, except, import)",
-      "scope": ["keyword.control", "storage.type", "keyword.other.import"],
-      "settings": { "foreground": "#459e85", "fontStyle": "bold" } // Brand Green
+      "name": "Attributes (The Dot Rule)",
+      "scope": [
+        "variable.other.property",
+        "variable.other.object.property",
+        "meta.attribute",
+        "support.variable.property",
+        "variable.other.member"
+      ],
+      "settings": { "foreground": "#22d3ee" }
     },
+    // 4. FUNCTIONS & METHODS (SKY BLUE)
     {
-      "name": "Functions",
-      "scope": ["entity.name.function", "support.function"],
-      "settings": { "foreground": "#7dd3fc" } // Sky Blue
+      "name": "Functions & Calls",
+      "scope": [
+        "entity.name.function",
+        "meta.function-call",
+        "variable.function",
+        "support.function",
+        "meta.method-call.python"
+      ],
+      "settings": { "foreground": "#7dd3fc" }
     },
+    // 5. MODULES, CLASSES & TYPES (PURPLE)
     {
-      "name": "Variables",
-      "scope": ["variable", "variable.other.readwrite", "variable.other.property"],
-      "settings": { "foreground": "#fda4af" } // Soft Salmon/Peach
+      "name": "Modules & Types",
+      "scope": [
+        "entity.name.namespace",
+        "support.module",
+        "entity.name.type.class",
+        "support.class",
+        "storage.type.import.python"
+      ],
+      "settings": { "foreground": "#c084fc" }
     },
+    // 6. CONSTANTS & NUMBERS (AMBER)
+    {
+      "name": "Constants & Numeric",
+      "scope": [
+        "variable.other.constant",
+        "constant.numeric",
+        "constant.language",
+        "support.constant"
+      ],
+      "settings": { "foreground": "#fbbf24", "fontStyle": "bold" }
+    },
+    // 7. STRINGS
     {
       "name": "Strings",
-      "scope": "string",
-      "settings": { "foreground": "#ffffff" } // Pure White for strings to pop
+      "scope": ["string", "punctuation.definition.string"],
+      "settings": { "foreground": "#ffffff" }
     },
+    // 8. SPECIFIC VARIABLE TYPES (SALMON)
     {
-      "name": "Numbers",
-      "scope": "constant.numeric",
-      "settings": { "foreground": "#fbbf24" } // Amber
+      "name": "Parameters & Named Args",
+      "scope": [
+        "variable.parameter",
+        "variable.other.readwrite.instance",
+        "meta.variable.parameter.python"
+      ],
+      "settings": { "foreground": "#fda4af" }
     },
+    // 9. DECORATORS & SPECIALS
     {
-      "name": "Exceptions/Types",
-      "scope": ["support.type", "entity.name.type.class"],
-      "settings": { "foreground": "#c084fc" } // Purple
+      "name": "Decorators",
+      "scope": ["entity.name.function.decorator", "meta.function.decorator"],
+      "settings": { "foreground": "#459e85", "fontStyle": "italic" }
     }
-  ]
+  ],
+  "semanticTokenColors": {
+    "comment": "#459e8580",
+    "property": "#22d3ee",
+    "variable": "#e5e7eb", 
+    "parameter": "#fda4af",
+    "function": "#7dd3fc",
+    "method": "#7dd3fc",
+    "selfKeyword": "#459e85",
+    "namespace": "#c084fc",
+    "module": "#c084fc",
+    "class": "#c084fc",
+    "magicFunction": "#22d3ee"
+  },
+  "semanticHighlighting": true
 }
