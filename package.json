@@ -1,0 +1,27 @@
+{
+  "name": "waamlabz-dark",
+  "displayName": "WAAMLABZ Dark",
+  "description": "A dark theme using WAAMLABZ greenish hue.",
+  "version": "0.0.1",
+  "publisher": "epico", 
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EoinCaughey/waamlabz-dark"
+  },
+
+  "engines": {
+    "vscode": "^1.110.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "WAAMLABZ Dark Theme",
+        "uiTheme": "vs-dark",
+        "path": "./themes/WAAMLABZ Dark Theme-color-theme.json"
+      }
+    ]
+  }
+}

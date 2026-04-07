@@ -1,0 +1,64 @@
+{
+  "name": "WAAMLABZ Dark",
+  "type": "dark",
+  "colors": {
+    "editor.background": "#0f1622",
+    "sideBar.background": "#0b1019",
+    "activityBar.background": "#090d14",
+    "activityBar.foreground": "#459e85",
+    "editorGroupHeader.tabsBackground": "#0b1019",
+    "tab.activeBackground": "#0f1622",
+    "tab.inactiveBackground": "#0b1019",
+    // --- Removing all visible borders ---
+    "sideBar.border": "#0f1622",
+    "editorGroup.border": "#0f1622",
+    "tab.border": "#0b1019",
+    "panel.border": "#0f1622",
+    
+    "statusBar.background": "#090d14",
+    "statusBar.foreground": "#459e85",
+    "editorCursor.foreground": "#459e85"
+  },
+  "tokenColors": [
+    {
+      "name": "Comments",
+      "scope": ["comment"],
+      "settings": { "foreground": "#459e8580", "fontStyle": "italic" }
+    },
+    {
+      "name": "Self Keyword (Python)",
+      "scope": ["variable.language.self.python", "variable.parameter.function.language.special.self.python"],
+      "settings": { "foreground": "#22d3ee", "fontStyle": "bold" } // Bright Cyan
+    },
+    {
+      "name": "Keywords (def, try, except, import)",
+      "scope": ["keyword.control", "storage.type", "keyword.other.import"],
+      "settings": { "foreground": "#459e85", "fontStyle": "bold" } // Brand Green
+    },
+    {
+      "name": "Functions",
+      "scope": ["entity.name.function", "support.function"],
+      "settings": { "foreground": "#7dd3fc" } // Sky Blue
+    },
+    {
+      "name": "Variables",
+      "scope": ["variable", "variable.other.readwrite", "variable.other.property"],
+      "settings": { "foreground": "#fda4af" } // Soft Salmon/Peach
+    },
+    {
+      "name": "Strings",
+      "scope": "string",
+      "settings": { "foreground": "#ffffff" } // Pure White for strings to pop
+    },
+    {
+      "name": "Numbers",
+      "scope": "constant.numeric",
+      "settings": { "foreground": "#fbbf24" } // Amber
+    },
+    {
+      "name": "Exceptions/Types",
+      "scope": ["support.type", "entity.name.type.class"],
+      "settings": { "foreground": "#c084fc" } // Purple
+    }
+  ]
+}
